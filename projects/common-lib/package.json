@@ -1,0 +1,23 @@
+{
+  "name": "@totvs-task-list/common",
+  "version": "0.0.0",
+  "description": "This library is part of project TOTVS Task List",
+  "author": "Diego Adilson Vieira <diegoavieira@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoavieira/totvs-task-list.git"
+  },
+  "homepage": "https://github.com/diegoavieira/totvs-task-list",
+  "bugs": "https://github.com/diegoavieira/totvs-task-list/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
