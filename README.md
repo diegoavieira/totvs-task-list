@@ -1,7 +1,5 @@
 # TOTVS Task List
 
-[![web-app](https://img.shields.io/badge/demo-diegoavieira.github.io%2Ftotvs--task--list-yellowgreen)](https://diegoavieira.github.io/totvs-task-list)
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
 ## Requirements
