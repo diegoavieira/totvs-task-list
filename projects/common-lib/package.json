@@ -15,7 +15,9 @@
   },
   "peerDependencies": {
     "@angular/common": "^11.1.2",
-    "@angular/core": "^11.1.2"
+    "@angular/core": "^11.1.2",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"
