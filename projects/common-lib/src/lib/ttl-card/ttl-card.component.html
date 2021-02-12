@@ -1,0 +1,11 @@
+<div class="ttl-card">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
+      <button *ngIf="route && actionLabel" type="button" class="btn btn-link mt-2" [routerLink]="[route]">
+        {{ actionLabel }}
+      </button>
+    </div>
+  </div>
+</div>

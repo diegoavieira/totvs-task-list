@@ -1,1 +1,8 @@
-
+<div class="home">
+  <div *ngIf="tasksPending$ | async; let tasksPending; else: loading">
+    <ttl-card [title]="tasksPending.length" subtitle="pending tasks" actionLabel="Check all" route="/task"></ttl-card>
+  </div>
+  <ng-template #loading>
+    <ttl-card subtitle="loading..."></ttl-card>
+  </ng-template>
+</div>

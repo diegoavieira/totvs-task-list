@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)
   },
   {
+    path: 'task',
+    loadChildren: () => import('./task/task.module').then((m) => m.TaskModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule)
   }

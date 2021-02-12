@@ -14,6 +14,10 @@ export class TaskService {
     return this.http.get<Task[]>(this.taskApi);
   }
 
+  getByStatus(status: boolean): Observable<Task[]> {
+    return this.http.get<Task[]>(`${this.taskApi}?status=${status}`);
+  }
+
   getById(id: number): Observable<Task> {
     return this.http.get<Task>(`${this.taskApi}/${id}`);
   }

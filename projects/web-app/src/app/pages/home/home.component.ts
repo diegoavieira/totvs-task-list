@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Task } from '../../services/task/task';
+import { TaskService } from '../../services/task/task.service';
 
 @Component({
   selector: 'web-home',
@@ -6,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  tasksPending$: Observable<Task[]>;
 
-  ngOnInit(): void {}
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.tasksPending$ = this.taskService.getByStatus(false);
+  }
 }
