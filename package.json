@@ -11,7 +11,17 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "web-app-serve": "ng serve web-app",
+    "web-app-test": "ng test web-app --watch=false --code-coverage --browsers=ChromeHeadless",
+    "web-app-build": "ng build web-app --prod --base-href=/adsystem/",
+    "common-lib-serve": "ng build --prod common-lib --watch",
+    "common-lib-test": "ng test common-lib --watch=false --code-coverage --browsers=ChromeHeadless",
+    "common-lib-build": "ng build --prod common-lib",
+    "test-all": "run-s *-test",
+    "test-libs": "run-s *-lib-test",
+    "build-libs": "run-s *-lib-build"
+
   },
   "private": true,
   "dependencies": {

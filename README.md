@@ -26,7 +26,6 @@ json-server --delay 500 db.json
 And in another terminal run:
 
 ```
-npm run build-libs
 npm run web-app-serve
 ```
 
@@ -35,13 +34,11 @@ The app will run on `http://localhost:4200`.
 ## Unit Tests
 
 ```
-npm run build-libs
 npm run test-all
 ```
 
 ## Build
 
 ```
-npm run build-libs
 npm run web-app-build
 ```
