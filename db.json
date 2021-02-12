@@ -13,17 +13,20 @@
     {
       "id": 1,
       "listId": 1,
-      "title": "Comprar arroz"
+      "title": "Comprar arroz",
+      "status": false
     },
     {
       "id": 2,
       "listId": 1,
-      "title": "Comprar feijão"
+      "title": "Comprar feijão",
+      "status": true
     },
     {
       "id": 3,
       "listId": 2,
-      "title": "Reunião às 10:00"
+      "title": "Reunião às 10:00",
+      "status": false
     }
   ]
 }
