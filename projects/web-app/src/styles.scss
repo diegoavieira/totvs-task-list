@@ -5,3 +5,8 @@ $theme-colors: (
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+b,
+strong {
+  font-weight: 500;
+}

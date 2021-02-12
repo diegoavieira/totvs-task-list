@@ -1,3 +1,8 @@
-<nav class="navbar" [ngClass]="'navbar-' + color + ' bg-' + background">
-  <a class="navbar-brand" [routerLink]="[route]">{{ title }}</a>
-</nav>
+<header class="toolbar">
+  <nav
+    class="navbar navbar-expand-md fixed-top d-flex justify-content-center"
+    [ngClass]="'navbar-' + color + ' bg-' + background"
+  >
+    <a class="navbar-brand" [routerLink]="[route]">{{ title }}</a>
+  </nav>
+</header>
