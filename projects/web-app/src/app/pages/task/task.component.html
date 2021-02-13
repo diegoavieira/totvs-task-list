@@ -1,5 +1,14 @@
 <div class="task">
-  <p class="pl-3"><strong>Mercado</strong></p>
+  <div *ngIf="list$ | async; let list; else: loading">
+    <p class="pl-3">
+      <strong>{{ list.title }}</strong>
+    </p>
+  </div>
+  <ng-template #loading>
+    <p class="pl-3">
+      <strong>Loading...</strong>
+    </p>
+  </ng-template>
   <ttl-list [items$]="tasks$"></ttl-list>
   <div class="d-flex justify-content-between pl-2 pr-2">
     <button type="button" class="btn btn-link mt-2" [routerLink]="['/list']">Voltar</button>

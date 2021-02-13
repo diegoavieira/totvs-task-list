@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { List } from '../../services/list/list';
+import { ListService } from '../../services/list/list.service';
 import { Task } from '../../services/task/task';
 import { TaskService } from '../../services/task/task.service';
 
@@ -11,10 +13,17 @@ import { TaskService } from '../../services/task/task.service';
 })
 export class TaskComponent implements OnInit {
   tasks$: Observable<Task[]>;
+  list$: Observable<List>;
 
-  constructor(private taskService: TaskService) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private taskService: TaskService,
+    private listService: ListService
+  ) {}
 
   ngOnInit(): void {
-    this.tasks$ = this.taskService.getByListId(1);
+    const listId = this.activatedRoute.snapshot.params.listId;
+    this.tasks$ = this.taskService.getByListId(listId);
+    this.list$ = this.listService.getById(listId);
   }
 }

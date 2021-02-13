@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then((m) => m.ListModule)
   },
   {
-    path: 'list/:id/task',
+    path: 'list/:listId/task',
     loadChildren: () => import('./task/task.module').then((m) => m.TaskModule)
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
   },
   {
-    path: 'list/:id/form',
+    path: 'list/:listId/form',
     loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
   },
   {
