@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'list', pathMatch: 'full' },
   {
-    path: '',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)
-  },
-  {
-    path: 'task',
-    loadChildren: () => import('./task/task.module').then((m) => m.TaskModule)
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then((m) => m.ListModule)
   },
   {
     path: '**',

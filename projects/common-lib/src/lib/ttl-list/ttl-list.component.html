@@ -1,0 +1,13 @@
+<div class="ttl-list card">
+  <div class="list-group list-group-flush" *ngIf="items$ | async; let items; else: loading">
+    <div class="list-group-item" *ngIf="!items.length">No results found</div>
+    <div class="list-group-item" [ngClass]="{ button: isButton }" *ngFor="let item of items" (click)="onClick(item.id)">
+      <span>{{ item.title }}</span>
+    </div>
+  </div>
+  <ng-template #loading>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Loading...</li>
+    </ul>
+  </ng-template>
+</div>

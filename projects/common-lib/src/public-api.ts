@@ -5,3 +5,4 @@
 export * from './lib/ttl-toolbar/ttl-toolbar.module';
 export * from './lib/ttl-footer/ttl-footer.module';
 export * from './lib/ttl-card/ttl-card.module';
+export * from './lib/ttl-list/ttl-list.module';

@@ -1,0 +1,14 @@
+.ttl-list {
+  .button {
+    cursor: pointer;
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+
+  .list-group-item {
+    &:focus {
+      outline: none;
+    }
+  }
+}
