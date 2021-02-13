@@ -1,3 +1,7 @@
 <div class="list">
+  <p class="pl-3"><strong>Lista</strong></p>
   <ttl-list [items$]="lists$" (clickEvent)="goTo($event)" [isButton]="true"></ttl-list>
+  <div class="d-flex justify-content-end pl-2 pr-2">
+    <button type="button" class="btn btn-link mt-2" [routerLink]="['/list/form']">Nova Lista</button>
+  </div>
 </div>

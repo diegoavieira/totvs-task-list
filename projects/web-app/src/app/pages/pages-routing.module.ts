@@ -8,6 +8,18 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then((m) => m.ListModule)
   },
   {
+    path: 'list/:id/task',
+    loadChildren: () => import('./task/task.module').then((m) => m.TaskModule)
+  },
+  {
+    path: 'list/form',
+    loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
+  },
+  {
+    path: 'list/:id/form',
+    loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule)
   }

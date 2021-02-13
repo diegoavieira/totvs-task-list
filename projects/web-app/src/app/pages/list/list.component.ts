@@ -19,6 +19,6 @@ export class ListComponent implements OnInit {
   }
 
   goTo(id: number): void {
-    this.router.navigateByUrl(`/list/${id}`);
+    this.router.navigateByUrl(`/list/${id}/task`);
   }
 }
