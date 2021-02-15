@@ -1,6 +1,11 @@
 <div class="list">
   <p class="pl-3"><strong>Listas</strong></p>
-  <ttl-list [items$]="lists$" (clickEvent)="goTo($event)" [isButton]="true"></ttl-list>
+  <ttl-list
+    [items$]="lists$"
+    (rowEvent)="goTo($event)"
+    [isButton]="true"
+    noMessageResults="Nenhuma lista cadastrada"
+  ></ttl-list>
   <div class="d-flex justify-content-end pl-2 pr-2">
     <button type="button" class="btn btn-link mt-2" [routerLink]="['/list/form']">Nova Lista</button>
   </div>

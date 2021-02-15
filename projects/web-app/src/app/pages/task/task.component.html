@@ -1,15 +1,19 @@
 <div class="task">
-  <div *ngIf="list$ | async; let list; else: loading">
-    <p class="pl-3">
+  <div *ngIf="list$ | async; let list; else: loading" class="d-flex justify-content-between align-items-center mb-2">
+    <span class="pl-3">
       <strong>{{ list.title }}</strong>
-    </p>
+    </span>
+    <button type="button" class="btn btn-link mr-2" [routerLink]="['/list/' + list.id + '/form']">Editar Lista</button>
   </div>
   <ng-template #loading>
-    <p class="pl-3">
-      <strong>Loading...</strong>
-    </p>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <span class="pl-3">
+        <strong>Loading...</strong>
+      </span>
+      <button type="button" class="btn btn-link mr-2" disabled>Editar Lista</button>
+    </div>
   </ng-template>
-  <ttl-list [items$]="tasks$"></ttl-list>
+  <ttl-list [items$]="tasks$" noMessageResults="Nenhuma tarefa cadastrada"></ttl-list>
   <div class="d-flex justify-content-between pl-2 pr-2">
     <button type="button" class="btn btn-link mt-2" [routerLink]="['/list']">Voltar</button>
     <button type="button" class="btn btn-link mt-2" [routerLink]="['/list/form']">Nova Tarefa</button>

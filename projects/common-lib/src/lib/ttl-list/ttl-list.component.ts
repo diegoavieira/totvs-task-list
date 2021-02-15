@@ -9,16 +9,21 @@ import { Observable } from 'rxjs';
 export class TtlListComponent implements OnInit {
   @Input() items$: Observable<any>;
   @Input() isButton: boolean;
+  @Input() noMessageResults: string;
 
-  @Output() clickEvent = new EventEmitter();
+  @Output() rowEvent = new EventEmitter();
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.noMessageResults) {
+      this.noMessageResults = 'Nenhum resultado encontrado';
+    }
+  }
 
-  onClick(id: number): void {
+  onRowClick(id: number): void {
     if (this.isButton) {
-      this.clickEvent.emit(id);
+      this.rowEvent.emit(id);
     }
   }
 }

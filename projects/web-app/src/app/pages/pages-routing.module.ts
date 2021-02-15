@@ -13,11 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'list/form',
-    loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
+    loadChildren: () => import('./list-form/list-form.module').then((m) => m.ListFormModule)
   },
   {
     path: 'list/:listId/form',
-    loadChildren: () => import('./form/form.module').then((m) => m.FormModule)
+    loadChildren: () => import('./list-form/list-form.module').then((m) => m.ListFormModule)
   },
   {
     path: '**',
