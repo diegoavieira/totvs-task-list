@@ -13,9 +13,16 @@
       <button type="button" class="btn btn-link mr-2" disabled>Editar Lista</button>
     </div>
   </ng-template>
-  <ttl-list [items$]="tasks$" noMessageResults="Nenhuma tarefa cadastrada"></ttl-list>
+  <ttl-list
+    [items$]="tasks$"
+    noMessageResults="Nenhuma tarefa cadastrada"
+    (rowEvent)="goTo($event)"
+    [isButton]="true"
+  ></ttl-list>
   <div class="d-flex justify-content-between pl-2 pr-2">
     <button type="button" class="btn btn-link mt-2" [routerLink]="['/list']">Voltar</button>
-    <button type="button" class="btn btn-link mt-2" [routerLink]="['/list/form']">Nova Tarefa</button>
+    <button type="button" class="btn btn-link mt-2" [routerLink]="['/list/' + listId + '/task/form']">
+      Nova Tarefa
+    </button>
   </div>
 </div>

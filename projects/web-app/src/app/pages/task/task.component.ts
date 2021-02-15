@@ -14,16 +14,22 @@ import { TaskService } from '../../services/task/task.service';
 export class TaskComponent implements OnInit {
   tasks$: Observable<Task[]>;
   list$: Observable<List>;
+  listId: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private taskService: TaskService,
-    private listService: ListService
+    private listService: ListService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    const listId = this.activatedRoute.snapshot.params.listId;
-    this.tasks$ = this.taskService.getByListId(listId);
-    this.list$ = this.listService.getById(listId);
+    this.listId = this.activatedRoute.snapshot.params.listId;
+    this.tasks$ = this.taskService.getByListId(this.listId);
+    this.list$ = this.listService.getById(this.listId);
+  }
+
+  goTo(id: number): void {
+    this.router.navigateByUrl(`/list/${this.listId}/task/${id}/form`);
   }
 }

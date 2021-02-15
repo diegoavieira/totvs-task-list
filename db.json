@@ -1,48 +1,32 @@
 {
   "lists": [
     {
+      "id": 1,
+      "title": "Mercado"
+    },
+    {
       "id": 2,
       "title": "Trabalho"
-    },
-    {
-      "title": "ddd",
-      "id": 4
-    },
-    {
-      "title": "ddfsdf",
-      "id": 5
-    },
-    {
-      "title": "dfsdf",
-      "id": 6
-    },
-    {
-      "title": "sdf",
-      "id": 7
-    },
-    {
-      "title": "sdf",
-      "id": 8
-    },
-    {
-      "title": "asdasd",
-      "id": 9
-    },
-    {
-      "title": "sdfd",
-      "id": 10
-    },
-    {
-      "title": "sdddfsdf",
-      "id": 11
     }
   ],
   "tasks": [
     {
-      "id": 3,
-      "listId": 2,
-      "title": "Reunião às 10:00",
+      "id": 1,
+      "listId": 1,
+      "title": "Comprar arroz",
       "status": false
+    },
+    {
+      "id": 2,
+      "listId": 1,
+      "title": "Comprar feijão",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "Reunião às 10:30",
+      "status": true,
+      "listId": "2"
     }
   ]
 }

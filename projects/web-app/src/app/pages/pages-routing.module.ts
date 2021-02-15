@@ -12,8 +12,16 @@ const routes: Routes = [
     loadChildren: () => import('./task/task.module').then((m) => m.TaskModule)
   },
   {
+    path: 'list/:listId/task/:taskId/form',
+    loadChildren: () => import('./task-form/task-form.module').then((m) => m.TaskFormModule)
+  },
+  {
     path: 'list/form',
     loadChildren: () => import('./list-form/list-form.module').then((m) => m.ListFormModule)
+  },
+  {
+    path: 'list/:listId/task/form',
+    loadChildren: () => import('./task-form/task-form.module').then((m) => m.TaskFormModule)
   },
   {
     path: 'list/:listId/form',

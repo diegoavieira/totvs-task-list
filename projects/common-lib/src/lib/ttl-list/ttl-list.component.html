@@ -2,12 +2,13 @@
   <div class="list-group list-group-flush" *ngIf="items$ | async; let items; else: loading">
     <div class="list-group-item" *ngIf="!items.length">{{ noMessageResults }}</div>
     <div
-      class="list-group-item"
+      class="list-group-item d-flex justify-content-between"
       [ngClass]="{ button: isButton }"
       *ngFor="let item of items"
       (click)="onRowClick(item.id)"
     >
       <span>{{ item.title }}</span>
+      <span *ngIf="item.status" class="text-success">Ok</span>
     </div>
   </div>
   <ng-template #loading>
